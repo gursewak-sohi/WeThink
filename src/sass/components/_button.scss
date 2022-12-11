@@ -1,0 +1,30 @@
+//  Button SCSS
+.btn {
+    cursor: pointer;
+    font-family: $font-Poppins;
+    border: none;
+    transition: $btn-transition;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    align-items: center;
+    &:active {
+        transform: scale(0.97);
+    }
+    &:disabled:active {
+        transform: scale(1);
+    }
+}
+
+.btn-apple {
+    background-color: $white;
+    width: 317px;
+    height: 56px;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 21px;
+    &:hover {
+        background-color: rgba($white, 90%);
+    }
+}

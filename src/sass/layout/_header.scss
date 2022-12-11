@@ -1,0 +1,25 @@
+// Header SCSS
+.header {
+    position: absolute;
+    padding: 44px 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    @include tablet {
+        padding: 24px 0;
+    }
+    & .header-block {
+        display: flex;
+        @include tablet {
+            justify-content: center;
+        }
+        & .logo {
+            display: inline-block;
+            @include tablet {
+                width: 95px;
+            }
+        }
+    }
+}

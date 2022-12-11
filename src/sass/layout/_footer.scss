@@ -1,0 +1,40 @@
+// Footer SCSS
+.footer {
+    padding: 44px 0;
+    background-color: $white;
+    @include tablet {
+        padding: 24px 0;
+    }
+    & .footer-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+            text-align: center;
+            row-gap: 24px;
+        }
+        & ul {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: $font-Poppins;
+            column-gap: 37px;
+            & li:not(:last-child) {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 1.46px;
+                    height: 14.35px;
+                    background-color: rgba($link, 50%);
+                    position: absolute;
+                    right: -19px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

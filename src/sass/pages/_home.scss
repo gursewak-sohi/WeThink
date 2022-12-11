@@ -1,0 +1,146 @@
+// Home Page SCSS here
+.hero-section {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../../assets/images/svg/bg.svg);
+        width: 1306px;
+        height: 1422px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        margin-left: -486px;
+        margin-top: 19px;
+        @include tablet {
+            background-image: url(../../assets/images/svg/bg-xs.svg);
+            width: 657px;
+            height: 700px;
+            margin-top: -100px;
+            margin-left: -35px;
+            top: 0;
+            transform: translate(-50%, 0);
+        }
+    }
+    & .hero-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 148px 0 52px;
+        min-height: calc(100vh - 120px);
+        @include tablet {
+            min-height: auto;
+            flex-direction: column;
+            padding: 106px 0 50px;
+        }
+        & .text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            top: -16px;
+            @include tablet {
+                align-items: center;
+                text-align: center;
+                top: 0;
+                margin-bottom: 38px;
+            }
+            & h1 {
+                font-weight: 600;
+                font-size: 80px;
+                line-height: 1.5;
+                font-family: $font-Poppins;
+                @include laptop {
+                    font-size: 72px;
+                }
+                @include tablet {
+                    font-size: 64px;
+                    line-height: 96px;
+                }
+            }
+            & ul {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 1.5;
+                font-family: $font-Mulish;
+                column-gap: 39px;
+                margin-bottom: 32px;
+                @include laptop {
+                    font-size: 20px;
+                    column-gap: 25px;
+                }
+                @include tablet {
+                    font-size: 18px;
+                }
+                & li:not(:last-child) {
+                    position: relative;
+                    &::after {
+                        content: '';
+                        width: 2.18px;
+                        height: 21.53px;
+                        background-color: rgba($white, 50%);
+                        position: absolute;
+                        right: -20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin-top: 2px;
+                        @include laptop {
+                            height: 16px;
+                            right: -14px;
+                        }
+                    }
+                }
+            }
+            & p {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 1.5;
+                font-family: $font-Mulish;
+                margin-bottom: 40px;
+                @include laptop {
+                    font-size: 20px;
+                }
+                @include tablet {
+                    font-size: 18px;
+                }
+            }
+        }
+        & .image {
+            position: relative;
+            right: -45px;
+            @include desktop {
+                right: 0;
+            }
+            @include laptop {
+                max-width: 520px;
+            }
+            @include tablet {
+                max-width: 359px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 539px;
+                height: 539px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                background: radial-gradient(60.54% 50.09% at 49.91% 49.91%, #19A6C5 0%, rgba(25, 166, 197, 0) 100%);
+                filter: blur(250px);
+                @-moz-document url-prefix() {
+                    opacity: 0.6;
+                }
+                @include tablet {
+                    display: none;
+                }
+            }
+            & img {
+                max-width: 100%;
+            }
+        }
+    }
+}

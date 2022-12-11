@@ -1,0 +1,23 @@
+// Variable SCSS
+// Fonts
+$font-Mulish: ('Mulish', sans-serif);
+$font-Poppins: ('Poppins', sans-serif);
+// Colors
+$bg: #F6FBFC;
+$white: #FFFFFF;
+$link: #01090B;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$laptop-width: 1199px;
+$desktop-width: 1399px;
+// Container Sizes
+$container: 1320px;
+$gutter-x: 40px;
+$gutter-x-xs: 8px;
+// Transition
+$link-transition: 200ms all ease;
+$btn-transition: 300ms background-color ease,
+300ms color ease,
+300ms border-color ease,
+300ms opacity ease;

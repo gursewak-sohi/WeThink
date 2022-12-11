@@ -1,0 +1,26 @@
+// Typography SCSS
+* {
+    box-sizing: border-box;
+    @include font-smoothing;
+}
+
+body {
+    background-color: $bg;
+    color: $white;
+    font-family: $font-Mulish;
+    font-weight: 500;
+}
+
+a {
+    color: $link;
+    transition: $link-transition;
+    text-decoration: none;
+    &:hover {
+        color: lighten($link, 15%);
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
